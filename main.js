@@ -1,67 +1,51 @@
+//adding items to shopping cart
+
 var shoppingCart = {};
 
-/*document.querySelector(".item").addEventListener("click", function (event) {
-  console.log("item clicked");
-  }
-  );*/
-
-
-//on click, get the textContent of the <p> tag within the div
-
-
 var groceryItemsArray = document.querySelectorAll(".item");
-console.log(groceryItemsArray)
-
 
 groceryItemsArray.forEach(function(foodItem) {
-  //console.log(foodItem.querySelector("p").innerHTML)
   foodItem.addEventListener("click", function () {
     var itemName = foodItem.querySelector("p").innerHTML;
-    console.log(itemName);
     if (shoppingCart[itemName]) {
-    shoppingCart[itemName]++
+    shoppingCart[itemName]++;
     } else {
-    shoppingCart[itemName] = 1
+    shoppingCart[itemName] = 1;
     }
-    console.log(shoppingCart);
-    var cart = document.getElementById("cart")
-    cart.innerHTML = cart.innerHTML + "<li>" + itemName + "</li>";
+    var cart = document.getElementById("cart");
+    var shoppingCartItems = Object.keys(shoppingCart);
+    var ulItems = "";
+    shoppingCartItems.forEach(function(itemName) {
+      var number = shoppingCart[itemName];
+      ulItems = ulItems + "<li>" + "<p class='foodname'>" + itemName + "</p>" + "<p class='num'>" + number + "</p>" + "</li>";
+    });
+    cart.innerHTML = ulItems;
   });
 });
 
 
-//var categories = document.querySelectorAll("a");
+//clickable links --> links show only items of their category
 
-var producelink = document.getElementById("producelink");
+var produceLink = document.getElementById("producelink");
+var beveragesLink = document.getElementById("beverageslink");
+var dessertsLink = document.getElementById("dessertslink");
 
-producelink.addEventListener("click", function() {
-  document.getElementById("produce").style.display = "flex";
-  document.getElementById("desserts").style.display = "none";
-  document.getElementById("beverages").style.display = "none";
 
+var foodCategoriesArray = document.querySelectorAll(".categories");
+
+
+var categoryClicked = function(categoryLink, idName) {
+foodCategoriesArray.forEach(function(categoryName) {
+  categoryLink.addEventListener("click", function() {
+    categoryName.style.display = "none";
+    document.querySelector(idName).style.display = "flex";
+  });
 });
+}
 
-var beverageslink = document.getElementById("beverageslink");
-
-beverageslink.addEventListener("click", function() {
-  document.getElementById("beverages").style.display = "flex";
-  document.getElementById("produce").style.display = "none";
-  document.getElementById("desserts").style.display = "none";
-});
-
-var dessertslink = document.getElementById("dessertslink");
-
-dessertslink.addEventListener("click", function() {
-  document.getElementById("desserts").style.display = "flex";
-  document.getElementById("produce").style.display = "none";
-  document.getElementById("beverages").style.display = "none";
-});
-
-
-
-
-
-
+categoryClicked(produceLink, "#produce");
+categoryClicked(beveragesLink, "#beverages");
+categoryClicked(dessertsLink, "#desserts");
 
 
 

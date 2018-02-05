@@ -1,13 +1,13 @@
 * {
   padding: 0;
   margin: 0;
-  font-size: 14px;
+  font-size: 20px;
   text-decoration: none;
   font-family: futura, sans-serif;
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 4em;
 }
 
 nav {
@@ -15,15 +15,13 @@ nav {
 }
 
 h2 {
-  font-size: 2.5em;
+  font-size: 2em;
   padding-top: 1em;
-  position: fixed;
-  left: 73%;
 }
 
 #cart {
-  position: fixed;
-  padding: 9em 0 0 6em;
+  padding: 2em 4em;
+  text-align: justify;
 }
 
 
@@ -42,6 +40,8 @@ main {
 aside {
   width: 30%;
   padding: 2em 0;
+  position: fixed;
+  right: 0;
 }
 
 div#produce, div#desserts, div#beverages {
@@ -56,8 +56,18 @@ div.item {
 }
 
 .item p {
-  color: green;
+  padding: .5em;
 }
+
+/*.num {
+  display: inline-block;
+  text-align: left;
+}
+
+.foodname {
+  display: inline-block;
+  text-align: right;
+} */
 
 img {
   width: 100%;
@@ -66,12 +76,15 @@ img {
 li {
   list-style: none;
   line-height: 2em;
-  font-size: 1.8em;
+  font-size: 1.3em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 a {
   text-decoration: none;
   color: white;
   padding: 1em;
-  font-size: 2em;
+  font-size: 1.5em;
 }
