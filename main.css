@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  text-decoration: none;
+  font-family: futura, sans-serif;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+nav {
+  padding: 2em 0;
+}
+
+h2 {
+  font-size: 2.5em;
+  padding-top: 1em;
+  position: fixed;
+  left: 73%;
+}
+
+#cart {
+  position: fixed;
+  padding: 9em 0 0 6em;
+}
+
+
+body {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+main {
+  background-color: pink;
+  width: 70%;
+  padding: 2em 0;
+}
+
+aside {
+  width: 30%;
+  padding: 2em 0;
+}
+
+div#produce, div#desserts, div#beverages {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+div.item {
+  width: 35%;
+  background-color: white;
+  margin: 2% 7.5%;
+}
+
+.item p {
+  color: green;
+}
+
+img {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+  line-height: 2em;
+  font-size: 1.8em;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  padding: 1em;
+  font-size: 2em;
+}

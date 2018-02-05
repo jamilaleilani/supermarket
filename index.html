@@ -1,0 +1,111 @@
+<!--3 categories of types of food
+
+Vegetables & Fruits
+Drinks
+Desserts
+
+page had two columns:
+ITEMS and SHOPPING CART
+shopping cart displays an array that is populated with items that have been clicked on
+items changes when link in category menu is clicked
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grocery Shopping</title>
+
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+  <main>
+
+    <h1>Categories</h1>
+
+    <nav>
+      <a href="#" id="producelink">Produce</a>
+      <a href="#" id="beverageslink">Beverages</a>
+      <a href="#" id="dessertslink">Desserts</a>
+    </nav>
+
+    <div id="produce">
+      <div class="item">
+        <img src="img/kale.jpg">
+        <p id="one">Kale</p>
+      </div>
+      <div class="item">
+        <img src="img/squash.jpg">
+        <p>Delicata Squash</p>
+      </div>
+      <div class="item">
+        <img src="img/avo.jpg">
+        <p>Avocado</p>
+      </div>
+      <div class="item">
+        <img src="img/pomelo.jpg">
+        <p>Pomelo</p>
+      </div>
+      <div class="item">
+        <img src="img/yam.jpg">
+        <p>Yam</p>
+      </div>
+    </div>
+
+    <div id="beverages">
+      <div class="item">
+        <img src="img/wine.jpg">
+        <p>Wine</p>
+      </div>
+      <div class="item">
+        <img src="img/kombucha.jpg">
+        <p>Kombucha</p>
+      </div>
+      <div class="item">
+        <img src="img/beer.jpg">
+        <p>Beer</p>
+      </div>
+      <div class="item">
+        <img src="img/lacroix.jpg">
+        <p>La Croix</p>
+      </div>
+      <div class="item">
+        <img src="img/juice.jpg">
+        <p>Juice</p>
+      </div>
+    </div>
+
+    <div id="desserts">
+      <div class="item">
+        <img src="img/icecream.jpg">
+        <p>Ice Cream</p>
+      </div>
+      <div class="item">
+        <img src="img/pie.jpg">
+        <p>Pie</p>
+      </div>
+      <div class="item">
+        <img src="img/cupcake.jpg">
+        <p>Cupcake</p>
+      </div>
+      <div class="item">
+        <img src="img/cookie.jpg">
+        <p>Cookie</p>
+      </div>
+      <div class="item">
+        <img src="img/cake.jpg">
+        <p>Cake</p>
+      </div>
+    </div>
+
+  </main>
+
+  <aside>
+    <h2>Shopping Cart</h2>
+    <ul id="cart">
+    </ul>
+  </aside>
+
+<script src="main.js"></script>
+</body>
+</html>
