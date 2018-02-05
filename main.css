@@ -6,12 +6,13 @@
   font-family: futura, sans-serif;
 }
 
+/* word styling */
 h1 {
   font-size: 4em;
 }
 
 nav {
-  padding: 2em 0;
+  padding-top: 1.5em;
 }
 
 h2 {
@@ -21,9 +22,24 @@ h2 {
 
 #cart {
   padding: 2em 4em;
-  text-align: justify;
 }
 
+li {
+  list-style: none;
+  line-height: 2em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  padding: 1em;
+  font-size: 1.5em;
+}
+
+/* body flex*/
 
 body {
   display: flex;
@@ -34,7 +50,6 @@ body {
 main {
   background-color: pink;
   width: 70%;
-  padding: 2em 0;
 }
 
 aside {
@@ -43,6 +58,20 @@ aside {
   position: fixed;
   right: 0;
 }
+
+header {
+  padding: 1em 0;
+  background-color: pink;
+  position: fixed;
+  text-align: center;
+  width: 70%;
+}
+
+.categories {
+  padding-top: 12em;
+}
+
+/**/
 
 div#produce, div#desserts, div#beverages {
   display: flex;
@@ -59,32 +88,7 @@ div.item {
   padding: .5em;
 }
 
-/*.num {
-  display: inline-block;
-  text-align: left;
-}
-
-.foodname {
-  display: inline-block;
-  text-align: right;
-} */
-
 img {
   width: 100%;
 }
 
-li {
-  list-style: none;
-  line-height: 2em;
-  font-size: 1.3em;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-  padding: 1em;
-  font-size: 1.5em;
-}

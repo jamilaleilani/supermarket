@@ -17,7 +17,7 @@ groceryItemsArray.forEach(function(foodItem) {
     var ulItems = "";
     shoppingCartItems.forEach(function(itemName) {
       var number = shoppingCart[itemName];
-      ulItems = ulItems + "<li>" + "<p class='foodname'>" + itemName + "</p>" + "<p class='num'>" + number + "</p>" + "</li>";
+      ulItems = ulItems + "<li>" + "<p>" + itemName + "</p>" + "<p>" + number + "</p>" + "</li>";
     });
     cart.innerHTML = ulItems;
   });
